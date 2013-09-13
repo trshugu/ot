@@ -1,0 +1,1 @@
+gcc -o tmp tmp.m && tmp
