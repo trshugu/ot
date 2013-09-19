@@ -2,16 +2,41 @@
 */
 
 #import <stdio.h>
+#import <objc/Object.h>
 //#import <time.h>
-//#import "Test.h"
-
 
 int main(void)
 {
 
 
+/*
+// エラーがでてクラス定義できない
+@interface Kurasu
+{
+   int x;
+}
+- (void)method;
+- (int)getX;
+@end
+
+@implementation Kurasu
+- (void)method {
+  printf("Kitty on your lap\n");
+}
+- (int)getX {
+  return x;
+}
+@end
+
+  //id obj;
+  //obj = [Kurasu];
+
+*/
+
 
 /*
+//#import "Test.h"
+
 char *name = "suzuki ichrou";
 id obj = [Test alloc];
 [obj setName:name];
