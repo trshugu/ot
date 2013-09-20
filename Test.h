@@ -1,7 +1,8 @@
 #import <stdio.h>
-#import <objc/Object.h>
+//#import <objc/Object.h>
+#include <Foundation/NSObject.h>
 
-@interface Test : Object
+@interface Test : NSObject
 {
 char *name;
 }
