@@ -3,6 +3,77 @@
 
 
 
+
+
+" hell""
+123 printNl.          "123"
+'Hello, world!' printNl.      "'Hello, world!'"
+'Hello, world!' displayNl.      "Hello, world!"
+Transcript show: 'Hello, Smalltalk!'; nl. "Hello, Smalltalk!"
+Transcript show: '%1 is not %2' % #(123 456). "123 is not 456"
+"
+
+" Stream""
+Transcript show: 'value = %1' % {42}.
+"
+
+
+" BlockClosure""
+([:x | x * 2] value: 10) printNl.
+
+double := [:x | x * 2].
+(double value: 100) printNl.
+
+([:x :y :z | x * y * z] value: 5 value: 6 value: 7) printNl.
+
+([:a :b :c :d | a + b + c + d] valueWithArguments: #(1 2 3 4)) printNl
+"
+
+
+" •ªŠò""
+Object subclass: #ConditionTest
+  instanceVariableNames:'count age name'
+  classVariableNames: ''
+  poolDictionaries: ''
+  category: nil.
+
+ConditionTest class methodsFor: ''.
+new
+  |r|
+  r := super new.
+  r init.
+  ^r.
+!!
+
+ConditionTest methodsFor: 'ini'.
+init
+  count := 10.
+  age   := 30.
+  name  := 'hellman'.
+!!
+
+ConditionTest methodsFor: ' if test '.
+checkTest
+  count := count + 1.
+!!
+
+ConditionTest methodsFor: 'print'.
+printOn: stream
+  ( count = 10 )
+    ifTrue: [ 'count is 10' printNl ].
+  ( age  =  29 )
+    ifFalse: [ age printNl ].
+  ( name = 'hellman' )
+    ifTrue: [ 'name is hell' printNl ].
+!!
+
+Smalltalk at: #a put: (ConditionTest new).
+a printNl
+"
+
+
+
+
 " ‰‰ŽZŽq""
 (((5+5)*2)+(9/3)) printNl
 "
