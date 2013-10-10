@@ -3,14 +3,26 @@
 
 
 
+" •Ï”""
+a := 20.	"a is 20"
 
+Object subclass: Hoge [
+  Hoge class >> new [
+    | r |
+    r := super new.
+    'I am constructor.' displayNl.
+    ^r.
+  ]
+].
+b := Hoge new.
+"
 
 " hell""
-123 printNl.          "123"
-'Hello, world!' printNl.      "'Hello, world!'"
-'Hello, world!' displayNl.      "Hello, world!"
-Transcript show: 'Hello, Smalltalk!'; nl. "Hello, Smalltalk!"
-Transcript show: '%1 is not %2' % #(123 456). "123 is not 456"
+123 printNl.
+'Hello, world!' printNl.
+'Hello, world!' displayNl.
+Transcript show: 'Hello, Smalltalk!'; nl.
+Transcript show: '%1 is not %2' % #(123 456).
 "
 
 " Stream""
