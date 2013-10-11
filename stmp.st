@@ -3,10 +3,10 @@
 
 
 " if文的なもの""
-"
 true ifTrue: ['I am true.' displayNl].
 true ifFalse: ['I am false.' displayNl].
 (true ifTrue: [1] ifFalse: [0]) printNl.
+"
 
 " 論理積、論理和""
 a := 10.
