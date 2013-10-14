@@ -4,7 +4,7 @@ int main(void)
 /*
 */
 
-
+NSFileManager* manager1 = [NSFileManager defaultManager];
 
 
 /*
