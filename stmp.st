@@ -2,6 +2,35 @@
 "
 
 
+" hash""
+hash := Dictionary from: { 'water' -> 'wet'. 'fire' -> 'hot' }.
+(hash at: 'fire') displayNl
+ 
+
+
+(hash removeKey: 'water') displayNl
+"
+
+
+
+
+" array""
+a := #(1 'hi' 3.14 1 2 (4 5))
+ 
+(a at: 3) displayNl
+(a reverse) displayNl
+(a asSet) displayNl
+"
+
+
+" ƒŠƒeƒ‰ƒ‹""
+(-199 abs) displayNl
+('gst is cool' size) displayNl
+('Slick' indexOf: $c) displayNl
+('Nice Day Isn''t It?' asLowercase asSet asSortedCollection asString) displayNl
+"
+
+
 " if•¶“I‚È‚à‚Ì""
 true ifTrue: ['I am true.' displayNl].
 true ifFalse: ['I am false.' displayNl].
