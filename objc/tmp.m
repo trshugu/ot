@@ -4,6 +4,9 @@ int main(void)
 /*
 */
 
+
+
+
 /*
 // 2‚Â‚ÌNSArray‚ğ1‚Â‚É‚µ‚Äo—Í‚·‚é
 NSArray* arr = [NSArray arrayWithObjects: @"one",@"two",nil];
