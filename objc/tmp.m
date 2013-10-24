@@ -4,8 +4,33 @@ int main(void)
 /*
 */
 
-NSFileManager* manager1 = [NSFileManager defaultManager];
+/*
+// 2つのNSArrayを1つにして出力する
+NSArray* arr = [NSArray arrayWithObjects: @"one",@"two",nil];
+NSArray* arr2 = [NSArray arrayWithObjects: @"three",@"four",nil];
+NSArray* newarr = [arr arrayByAddingObjectsFromArray:arr2];
+NSUInteger n = [newarr count];
+int i;
+for(i = 0;i < n;i++){
+    NSLog(@"%i:%@",i,[newarr objectAtIndex:i]);
+}
+*/
 
+/*
+// NSArrayの全要素を出力する
+NSArray* arr = [NSArray arrayWithObjects:@"Hello", @"Welcome",@"Bye",nil];
+NSUInteger n = [arr count];
+int i;
+for(i = 0;i < n;i++){
+  NSLog(@"%i:%@",i,[arr objectAtIndex:i]);
+}
+*/
+
+/*
+// NSArrayを作成し出力する
+NSArray* arr = [NSArray arrayWithObjects:@"Hello",@"Welcome",@"Bye",nil];
+NSLog(@"%@",arr);
+*/
 
 /*
 // NSMutableStringの操作
