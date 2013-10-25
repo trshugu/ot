@@ -8,16 +8,131 @@ int main(void)
 
 
 /*
+// 集合の処理
+NSMutableSet* set = [NSMutableSet setWithObjects: @"tuyano",@"taro",@"hanako",@"buhi",nil];
+NSEnumerator* enm = [set objectEnumerator];
+id obj;
+while (obj = [enm nextObject]) {
+  NSLog(@"%@",obj);
+}
+*/
+
+
+/*
+// 集合演算
+NSMutableSet* set = [NSMutableSet setWithObjects: @"tuyano",@"taro",@"hanako",@"buhi",nil];
+NSMutableSet* set2 = [NSMutableSet setWithObjects: @"tuyano",@"ihiro",@"hanako",@"hoge",nil];
+
+[set intersectSet:set2];
+NSLog(@"%@",set);
+*/
+
+
+
+/*
+// 集合の操作
+NSMutableSet* set = [NSMutableSet setWithCapacity:1];
+[set addObject:@"tuyano"];
+[set addObject:@"taro"];
+[set addObject:@"hanako"];
+[set addObject:@"taro"];
+[set removeObject:@"taro"];
+NSLog(@"%@",set);
+*/
+
+
+/*
+// 集合 ユニークな値を保持
+NSSet* set = [NSSet setWithObjects: @"tuyano",@"taro",nil];
+set = [set setByAddingObject : @"hanako"];
+set = [set setByAddingObject : @"taro"];
+NSLog(@"%@",set);
+*/
+
+
+
+/*
+NSMutableDictionary* dict = [NSMutableDictionary dictionary];
+[dict setObject:@"090-9999-9999" forKey:@"tuyano"];
+[dict setObject:@"03-555-5555"forKey:@"taro"];
+[dict setObject:@"080-765-4321"forKey:@"hanako"];
+
+[dict removeObjectForKey:@"taro"];
+NSLog(@"%@",dict);
+*/
+
+
+/*
+// キーの取得
+NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys:
+  @"090-9999-9999",@"tuyano",
+  @"03-555-5555",@"taro",
+  @"080-765-4321",@"hanako",nil];
+NSArray* keys = [dic allKeys];
+id obj;
+for (obj in keys){
+  id val = [dic objectForKey:obj]; 
+  NSLog(@"%@: %@",obj,val);
+}
+*/
+
+
+/*
+// 連想配列
+NSArray* keys = [NSArray arrayWithObjects : @"tuyano",@"taro",@"hanako",nil];
+NSArray* vals = [NSArray arrayWithObjects : @"090-9999-9999",@"03-555-5555", @"080-765-4321",nil];
+NSDictionary* dic = [NSDictionary dictionaryWithObjects : vals forKeys : keys];
+NSLog(@"%@",dic);
+*/
+
+
+/*
+// イテレータ
+NSMutableArray* arr = [NSMutableArray arrayWithObjects:@"Hello",@"Welcome",@"Bye",nil];
+for(id obj in arr){
+    NSLog(@"%@",obj);
+}
+
+// 逆順で取り出し
+NSEnumerator* enm = [arr reverseObjectEnumerator];
+id obj;
+while (obj = [enm nextObject]) {
+    NSLog(@"%@",obj);
+}
+*/
+
+
+/*
+// オブジェクトの挿入と削除
+NSMutableArray* arr = [NSMutableArray arrayWithObjects:@"Hello",@"Welcome",@"Bye",nil];
+[arr insertObject:@"Hi" atIndex:1];
+[arr removeObject:@"Welcome"];
+[arr removeObjectAtIndex:0];
+NSLog(@"%@",arr);
+*/
+
+/*
+// NSMutableArrayとオブジェクトの追加・変更
+NSMutableArray* arr = [NSMutableArray arrayWithCapacity:1];
+[arr addObject:@"Helo"];
+[arr addObject:@"Hi"];
+[arr replaceObjectAtIndex:1 withObject:@"Bye!"];
+NSLog(@"%@",arr);
+*/
+
+
+/*
 // 2つのNSArrayを1つにして出力する
-NSArray* arr = [NSArray arrayWithObjects: @"one",@"two",nil];
-NSArray* arr2 = [NSArray arrayWithObjects: @"three",@"four",nil];
-NSArray* newarr = [arr arrayByAddingObjectsFromArray:arr2];
+NSArray* arr = [NSArray arrayWithObjects : @"one", @"two", nil];
+NSArray* arr2 = [NSArray arrayWithObjects : @"three", @"four", nil];
+NSArray* newarr = [arr arrayByAddingObjectsFromArray : arr2];
 NSUInteger n = [newarr count];
 int i;
 for(i = 0;i < n;i++){
-    NSLog(@"%i:%@",i,[newarr objectAtIndex:i]);
+  NSLog(@"%i:%@", i, [newarr objectAtIndex : i]);
 }
 */
+
 
 /*
 // NSArrayの全要素を出力する
