@@ -7,6 +7,96 @@ int main(void)
 
 
 
+
+
+/*
+// リンクの作成
+NSFileManager* manager = [NSFileManager defaultManager];
+NSString* path = [NSHomeDirectory() stringByAppendingPathComponent: @"Documents"];
+NSString* path2 = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop/doc_alias"];
+NSError* err;
+[manager createSymbolicLinkAtPath:path2 withDestinationPath:path error:&err];
+NSLog(@"%@",[manager  destinationOfSymbolicLinkAtPath:path2 error:&err]);
+*/
+
+/*
+// ファイルのRW
+NSString* path = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop/data.txt"];
+NSError* err;
+NSString* str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&err];
+NSLog(@"%@",str);
+
+str = [str stringByAppendingString: @"** add test**\n"];
+NSString* path2 = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop/saved.txt"];
+[str writeToFile:path2 atomically:YES encoding:NSUTF8StringEncoding error:&err];
+*/
+
+
+/*
+// ファイルexist
+NSFileManager* manager = [NSFileManager defaultManager];
+NSString* path = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop\\data.txt"];
+BOOL isdir;
+NSLog(@"exists:%@",[manager fileExistsAtPath: path isDirectory:&isdir] ? @"YES" : @"NO");
+NSLog(@"isDir:%@",isdir ? @"YES" : @"NO");
+NSLog(@"canRead:%@",[manager isReadableFileAtPath: path] ? @"YES" : @"NO");
+NSLog(@"canSave:%@",[manager isWritableFileAtPath: path] ? @"YES" : @"NO");
+NSLog(@"canExec:%@",[manager isExecutableFileAtPath: path] ? @"YES" : @"NO");
+NSLog(@"canDele:%@",[manager isDeletableFileAtPath: path] ? @"YES" : @"NO");
+*/
+
+/*
+// ファイルコピー
+NSFileManager* manager = [NSFileManager defaultManager];
+NSError* err = nil;
+NSString* path = [NSHomeDirectory() 
+                  stringByAppendingPathComponent:
+                  @"Desktop/data.txt"];
+NSString* tpath = [NSHomeDirectory() 
+                   stringByAppendingPathComponent:
+                   @"Desktop/copyed.txt"];
+
+[manager copyItemAtPath:path toPath: tpath error:&err];
+
+if (err == nil) {
+    NSLog(@"copyed.");
+} else {
+    NSLog(@"%@.",[err localizedDescription]);
+}
+*/
+
+
+/*
+// パスの構成要素を操作
+NSString* path = NSHomeDirectory();
+path = [path stringByAppendingPathComponent: @"Desktop"];
+NSString* fullpath = [path stringByExpandingTildeInPath];
+NSString* shortpath = [path stringByAbbreviatingWithTildeInPath];
+NSString* dlpath = [path stringByDeletingLastPathComponent];
+NSString* newpath = [path stringByAppendingPathComponent:@"newfile"];
+
+NSLog(@"%@",fullpath);
+NSLog(@"%@",shortpath);
+NSLog(@"%@",dlpath);
+NSLog(@"%@",newpath);
+*/
+
+/*
+// パスの要素を配列で取得する
+NSString* path = NSHomeDirectory();
+NSArray* arr = [path pathComponents];
+NSLog(@"%@",arr);
+*/
+
+
+/*
+// ファイルパスとNSString
+NSString* path = NSHomeDirectory();
+NSString* shortpath = [path stringByAbbreviatingWithTildeInPath];
+NSLog(@"%@",path);
+NSLog(@"%@",shortpath);
+*/
+
 /*
 // 集合の処理
 NSMutableSet* set = [NSMutableSet setWithObjects: @"tuyano",@"taro",@"hanako",@"buhi",nil];
