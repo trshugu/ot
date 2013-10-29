@@ -1,4 +1,5 @@
 #import "tmp.h"
+
 int main(void)
 {
 /*
@@ -7,6 +8,90 @@ int main(void)
 
 
 
+
+/*
+// NSThread
+MyTestClass* obj1 = [MyTestClass myTestClassToEndCount:5];
+MyTestClass* obj2 = [MyTestClass myTestClassToEndCount:3];
+
+[NSThread detachNewThreadSelector: @selector(printMessage:) toTarget:obj1 withObject:@"first"];
+[NSThread detachNewThreadSelector: @selector(printMessage:) toTarget:obj2 withObject:@"second"];
+NSLog(@"start!!");
+ 
+// 終了しないようにしておく
+[[NSRunLoop currentRunLoop] run];
+*/
+
+
+/*
+// NSTimer
+MyTestClass* obj = [MyTestClass myTestClassToEndCount:3];
+NSDictionary* data = [NSDictionary dictionaryWithObject:@"timer message" forKey:@"msg"];
+NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:obj selector:@selector(printMessage:) userInfo:data repeats:YES];
+NSLog(@"start!!");
+
+// 終了しないようにしておく
+[[NSRunLoop currentRunLoop] run];
+*/
+
+/*
+// 非同期通信とデリゲート
+NSString* address = @"http://www.apple.com/";
+NSURL* url = [NSURL URLWithString:address];
+NSURLRequest* request = [NSURLRequest requestWithURL:url];
+SampleConnectDelegate* delegate = [[SampleConnectDelegate alloc] init];
+NSURLConnection* connection = [NSURLConnection
+connectionWithRequest:request delegate:delegate];
+
+if (!connection) {
+  NSLog(@"Error...");
+}
+
+// 終了しないようにしておく
+[[NSRunLoop currentRunLoop] run];
+*/
+
+
+/*
+// NSURLConnectionによる同期通信
+NSString* address = @"http://www.apple.com/";
+NSURL* url = [NSURL URLWithString:address];
+
+NSURLRequest* request = [NSURLRequest requestWithURL:url];
+NSURLResponse* response = nil;
+NSError* error = nil;
+
+NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+NSString* result = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+NSLog(@"%@",result);
+*/
+
+
+/*
+// URL情報取得
+NSString* address = @"http://apple.com:8080/jp/index?id=acd";
+NSURL* url = [NSURL URLWithString:address];
+NSLog(@"%@",[url absoluteString]);
+NSLog(@"%@",[url port]);
+NSLog(@"%@",[url host]);
+NSLog(@"%@",[url path]);
+NSLog(@"%@",[url query]);
+*/
+
+
+/*
+// URLからロード
+NSString* path = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop/data.txt"];
+NSURL* url = [NSURL fileURLWithPath:path];
+NSError* err;
+NSString* str = [NSString stringWithContentsOfURL:url  encoding:NSUTF8StringEncoding error:&err];
+NSLog(@"%@",str);
+
+NSString* address = @"http://www.apple.com/";
+NSURL* url2 = [NSURL URLWithString:address];
+id str2 = [NSString stringWithContentsOfURL:url2 encoding:NSUTF8StringEncoding error:&err];
+NSLog(@"%@",str2);
+*/
 
 
 /*
