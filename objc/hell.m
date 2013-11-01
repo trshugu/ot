@@ -3,7 +3,7 @@
 @implementation HelloWorld
 - (void) hello
 {
-  printf("Hello World.\n");
+  printf("Hell World.\n");
 }
 @end
 
