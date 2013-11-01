@@ -10,6 +10,7 @@ int main(void)
 
 
 /*
+*/
 // NSThread
 MyTestClass* obj1 = [MyTestClass myTestClassToEndCount:5];
 MyTestClass* obj2 = [MyTestClass myTestClassToEndCount:3];
@@ -20,10 +21,10 @@ NSLog(@"start!!");
  
 // 終了しないようにしておく
 [[NSRunLoop currentRunLoop] run];
-*/
 
 
 /*
+*/
 // NSTimer
 MyTestClass* obj = [MyTestClass myTestClassToEndCount:3];
 NSDictionary* data = [NSDictionary dictionaryWithObject:@"timer message" forKey:@"msg"];
@@ -32,7 +33,6 @@ NSLog(@"start!!");
 
 // 終了しないようにしておく
 [[NSRunLoop currentRunLoop] run];
-*/
 
 /*
 // 非同期通信とデリゲート
@@ -559,9 +559,9 @@ id obj = [Kurasu alloc];
 
 
 /*
-*/
   printf("hell\n");
   printf("world\n");
+*/
   
   return 0;
 }
