@@ -1,1 +1,1 @@
-gcc -o hell hell.m -framework Foundation && ./hell.o
+gcc -o hell.o hell.m -framework Foundation && ./hell.o
