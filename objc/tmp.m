@@ -10,7 +10,6 @@ int main(void)
 
 
 /*
-*/
 // NSThread
 MyTestClass* obj1 = [MyTestClass myTestClassToEndCount:5];
 MyTestClass* obj2 = [MyTestClass myTestClassToEndCount:3];
@@ -21,10 +20,10 @@ NSLog(@"start!!");
  
 // 終了しないようにしておく
 [[NSRunLoop currentRunLoop] run];
+*/
 
 
 /*
-*/
 // NSTimer
 MyTestClass* obj = [MyTestClass myTestClassToEndCount:3];
 NSDictionary* data = [NSDictionary dictionaryWithObject:@"timer message" forKey:@"msg"];
@@ -33,6 +32,7 @@ NSLog(@"start!!");
 
 // 終了しないようにしておく
 [[NSRunLoop currentRunLoop] run];
+*/
 
 /*
 // 非同期通信とデリゲート
@@ -68,6 +68,7 @@ NSLog(@"%@",result);
 
 
 /*
+*/
 // URL情報取得
 NSString* address = @"http://apple.com:8080/jp/index?id=acd";
 NSURL* url = [NSURL URLWithString:address];
@@ -76,7 +77,6 @@ NSLog(@"%@",[url port]);
 NSLog(@"%@",[url host]);
 NSLog(@"%@",[url path]);
 NSLog(@"%@",[url query]);
-*/
 
 
 /*
@@ -183,6 +183,7 @@ NSLog(@"%@",shortpath);
 */
 
 /*
+*/
 // 集合の処理
 NSMutableSet* set = [NSMutableSet setWithObjects: @"tuyano",@"taro",@"hanako",@"buhi",nil];
 NSEnumerator* enm = [set objectEnumerator];
@@ -190,7 +191,6 @@ id obj;
 while (obj = [enm nextObject]) {
   NSLog(@"%@",obj);
 }
-*/
 
 
 /*
