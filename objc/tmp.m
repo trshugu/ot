@@ -559,9 +559,9 @@ id obj = [Kurasu alloc];
 
 
 /*
+*/
   printf("hell\n");
   printf("world\n");
-*/
   
   return 0;
 }
