@@ -68,7 +68,6 @@ NSLog(@"%@",result);
 
 
 /*
-*/
 // URLî•ñæ“¾
 NSString* address = @"http://apple.com:8080/jp/index?id=acd";
 NSURL* url = [NSURL URLWithString:address];
@@ -77,6 +76,7 @@ NSLog(@"%@",[url port]);
 NSLog(@"%@",[url host]);
 NSLog(@"%@",[url path]);
 NSLog(@"%@",[url query]);
+*/
 
 
 /*
@@ -183,7 +183,6 @@ NSLog(@"%@",shortpath);
 */
 
 /*
-*/
 // W‡‚Ìˆ—
 NSMutableSet* set = [NSMutableSet setWithObjects: @"tuyano",@"taro",@"hanako",@"buhi",nil];
 NSEnumerator* enm = [set objectEnumerator];
@@ -191,6 +190,7 @@ id obj;
 while (obj = [enm nextObject]) {
   NSLog(@"%@",obj);
 }
+*/
 
 
 /*
