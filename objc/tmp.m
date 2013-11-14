@@ -367,6 +367,7 @@ NSLog(@"%@",res);
 */
 
 
+
 /*
 // substr
 NSString* str = @"Welcome to Objective-C.";
