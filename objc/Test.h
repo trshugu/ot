@@ -1,12 +1,13 @@
 #import <stdio.h>
 //#import <objc/Object.h>
-#include <Foundation/NSObject.h>
+#import <Foundation/NSObject.h>
+#import <Foundation/Foundation.h>
 
-@interface Test : NSObject
-{
-char *name;
+@interface Teste : NSObject{
+  char *name;
 }
-- (void) method;
-- (void) setName:(char*)p_n;
-- (char*) getName;
+
+-(void)method;
+-(void)setName:(char*)p_n;
+-(char*)getName;
 @end

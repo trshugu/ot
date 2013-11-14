@@ -424,23 +424,14 @@ NSLog(@"%@",str);
 
 /*
 // セレクタ
-@interface A : NSObject
-- (void) Write;
-@end
-
-@implementation A
-- (void) Write {
-  printf("I am the born of my sword.\n");
-}
-@end
-
   id obj;
   SEL method;
 
-  obj = [A new];
-  method = @selector(Write);
+  obj = [Aaa new];
+  method = @selector(Writen);
   [obj perform:method];
 */
+
 
 /*
 // 型指定
@@ -456,38 +447,12 @@ NSLog(@"%@",str);
 */
 
 
+
 /*
-
-@interface Point : NSObject
-{
-  int x, y;
-}
-- (void)setPoint:(int)ptx int:(int)pty;
-- (int)getX;
-- (int)getY;
-@end
-
-@implementation Point
-- (void)setPoint:(int)x int:(int)y
-{
-  self->x = x;
-  self->y = y;
-}
-
-- (int)getX
-{
-  return x;
-}
-- (int)getY
-{
-  return y;
-}
-@end
-
-
+// クラス
   id point1 , point2;
-  point1 = [Point alloc];
-  point2 = [Point alloc];
+  point1 = [Pointe alloc];
+  point2 = [Pointe alloc];
 
   [point1 setPoint:32 int:64];
   [point2 setPoint:256 int:128];
@@ -504,33 +469,18 @@ NSLog(@"%@",str);
 #import "Test.m"
 
 char *name = "suzuki ichrou";
-id obj = [Test alloc];
+id obj = [Teste alloc];
 [obj setName:name];
 printf("main: name -> %s \n", [obj getName]);
 [obj method];
 [[Test alloc] method];
 */
 
+
 /*
 // エラーがでてクラス定義できない→GNUstep導入でできた
 #include <Foundation/NSObject.h>
 // importは多重インクルードガードつき
-@interface Kurasu :NSObject
-{
-   int x;
-}
-- (void)method;
-- (int)getX;
-@end
-
-@implementation Kurasu
-- (void)method {
-  printf("Kitty on your lap\n");
-}
-- (int)getX {
-  return x;
-}
-@end
 
 id obj = [Kurasu alloc];
 [obj method];
@@ -539,22 +489,9 @@ id obj = [Kurasu alloc];
 
 /*
 // 成功例
-@interface HelloWorld : NSObject
-- (void) hello;
-@end
-
-@implementation HelloWorld
-- (void) hello
-{
-  printf("Hello World.\n");
-}
-@end
-
-  id obj = [HelloWorld alloc];
-  [obj hello];
-  return 0;
-
-
+id obj = [HelloWorld alloc];
+[obj hello];
+return 0;
 */
 
 

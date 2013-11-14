@@ -1,9 +1,8 @@
 #import <stdio.h>
 #import "Test.h"
 
-@implementation Test
-- (void) method
-{
+@implementation Teste
+- (void) method {
 printf("Kitty on your lap\n");
 printf("My Name is %s\n", self->name);
 return;

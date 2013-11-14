@@ -11,7 +11,7 @@
 #import <Foundation/NSURLRequest.h>
 #import <Foundation/NSRunLoop.h>
 #import <Foundation/NSData.h>
-//#import <Cocoa/Cocoa.h>
+#import <Cocoa/Cocoa.h>
 #import <time.h>
 
 /*
@@ -22,7 +22,9 @@
 
 
 
+
 /*
+// NSThread
 @interface MyTestClass : NSObject {
   int count;
   int endcount;
@@ -61,6 +63,7 @@
 
 
 /*
+// NSTimer
 @interface MyTestClass : NSObject {
   int count;
   int endcount;
@@ -104,6 +107,7 @@
 
 
 /*
+// 非同期通信とデリゲート
 // デリゲートクラスの宣言
 @interface SampleConnectDelegate : NSObject {
   NSMutableData* result;
@@ -128,4 +132,85 @@
 @end
 */
 
+
+/*
+// セレクタ
+@interface Aaa : NSObject
+- (void) Writen;
+@end
+
+@implementation Aaa
+- (void) Writen {
+  printf("I am the born of my sword.\n");
+}
+@end
+*/
+
+
+/*
+// クラス
+@interface Pointe : NSObject
+{
+  int xx, yy;
+}
+- (void)setPoint:(int)ptx int:(int)pty;
+- (int)getX;
+- (int)getY;
+@end
+
+@implementation Pointe
+- (void)setPoint:(int)x int:(int)y
+{
+  self->xx = x;
+  self->yy = y;
+}
+
+- (int)getX
+{
+  return xx;
+}
+- (int)getY
+{
+  return yy;
+}
+@end
+*/
+
+
+/*
+// エラーがでてクラス定義できない→GNUstep導入でできた
+@interface Kurasu :NSObject
+{
+   int x;
+}
+- (void)method;
+- (int)getX;
+@end
+
+@implementation Kurasu
+- (void)method {
+  printf("Kitty on your lap\n");
+}
+- (int)getX {
+  return x;
+}
+@end
+*/
+
+
+
+
+/*
+// 成功例
+@interface HelloWorld : NSObject
+- (void) hello;
+@end
+
+@implementation HelloWorld
+- (void) hello
+{
+  printf("Hello World.\n");
+}
+@end
+*/
 
