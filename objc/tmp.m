@@ -7,13 +7,21 @@ int main(void)
 
 
 
+
+
+
+
+/*
 // defaultManageを複数回呼び出す
-@autoreleasepool {
-  NSFileManager* manager1 = [NSFileManager DefaultManager];
-  NSFileManager* manager2 = [NSFileManager DefaultManager];
+@autoreleasepool
+{
+  NSFileManager* manager1 = [NSFileManager defaultManager];
+  NSFileManager* manager2 = [NSFileManager defaultManager];
   NSLog(@"%@", manager1);
   NSLog(@"%@", manager2);
 }
+*/
+
 
 /*
 // NSThread

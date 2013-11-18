@@ -1,1 +1,1 @@
-gcc -o tmp.o tmp.m -framework Foundation && ./tmp.o
+clang -o tmp.o tmp.m -framework Foundation && ./tmp.o
