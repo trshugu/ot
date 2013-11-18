@@ -7,7 +7,13 @@ int main(void)
 
 
 
-
+// defaultManageã‚’è¤‡æ•°å›å‘¼ã³å‡ºã™
+@autoreleasepool {
+  NSFileManager* manager1 = [NSFileManager DefaultManager];
+  NSFileManager* manager2 = [NSFileManager DefaultManager];
+  NSLog(@"%@", manager1);
+  NSLog(@"%@", manager2);
+}
 
 /*
 // NSThread
@@ -18,7 +24,7 @@ MyTestClass* obj2 = [MyTestClass myTestClassToEndCount:3];
 [NSThread detachNewThreadSelector: @selector(printMessage:) toTarget:obj2 withObject:@"second"];
 NSLog(@"start!!");
  
-// I—¹‚µ‚È‚¢‚æ‚¤‚É‚µ‚Ä‚¨‚­
+// çµ‚äº†ã—ãªã„ã‚ˆã†ã«ã—ã¦ãŠã
 [[NSRunLoop currentRunLoop] run];
 */
 
@@ -30,12 +36,12 @@ NSDictionary* data = [NSDictionary dictionaryWithObject:@"timer message" forKey:
 NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:obj selector:@selector(printMessage:) userInfo:data repeats:YES];
 NSLog(@"start!!");
 
-// I—¹‚µ‚È‚¢‚æ‚¤‚É‚µ‚Ä‚¨‚­
+// çµ‚äº†ã—ãªã„ã‚ˆã†ã«ã—ã¦ãŠã
 [[NSRunLoop currentRunLoop] run];
 */
 
 /*
-// ”ñ“¯Šú’ÊM‚ÆƒfƒŠƒQ[ƒg
+// éåŒæœŸé€šä¿¡ã¨ãƒ‡ãƒªã‚²ãƒ¼ãƒˆ
 NSString* address = @"http://www.apple.com/";
 NSURL* url = [NSURL URLWithString:address];
 NSURLRequest* request = [NSURLRequest requestWithURL:url];
@@ -47,13 +53,13 @@ if (!connection) {
   NSLog(@"Error...");
 }
 
-// I—¹‚µ‚È‚¢‚æ‚¤‚É‚µ‚Ä‚¨‚­
+// çµ‚äº†ã—ãªã„ã‚ˆã†ã«ã—ã¦ãŠã
 [[NSRunLoop currentRunLoop] run];
 */
 
 
 /*
-// NSURLConnection‚É‚æ‚é“¯Šú’ÊM
+// NSURLConnectionã«ã‚ˆã‚‹åŒæœŸé€šä¿¡
 NSString* address = @"http://www.apple.com/";
 NSURL* url = [NSURL URLWithString:address];
 
@@ -68,7 +74,7 @@ NSLog(@"%@",result);
 
 
 /*
-// URLî•ñæ“¾
+// URLæƒ…å ±å–å¾—
 NSString* address = @"http://apple.com:8080/jp/index?id=acd";
 NSURL* url = [NSURL URLWithString:address];
 NSLog(@"%@",[url absoluteString]);
@@ -80,7 +86,7 @@ NSLog(@"%@",[url query]);
 
 
 /*
-// URL‚©‚çƒ[ƒh
+// URLã‹ã‚‰ãƒ­ãƒ¼ãƒ‰
 NSString* path = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop/data.txt"];
 NSURL* url = [NSURL fileURLWithPath:path];
 NSError* err;
@@ -95,7 +101,7 @@ NSLog(@"%@",str2);
 
 
 /*
-// ƒŠƒ“ƒN‚Ìì¬
+// ãƒªãƒ³ã‚¯ã®ä½œæˆ
 NSFileManager* manager = [NSFileManager defaultManager];
 NSString* path = [NSHomeDirectory() stringByAppendingPathComponent: @"Documents"];
 NSString* path2 = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop/doc_alias"];
@@ -105,7 +111,7 @@ NSLog(@"%@",[manager  destinationOfSymbolicLinkAtPath:path2 error:&err]);
 */
 
 /*
-// ƒtƒ@ƒCƒ‹‚ÌRW
+// ãƒ•ã‚¡ã‚¤ãƒ«ã®RW
 NSString* path = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop/data.txt"];
 NSError* err;
 NSString* str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&err];
@@ -118,7 +124,7 @@ NSString* path2 = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop/s
 
 
 /*
-// ƒtƒ@ƒCƒ‹exist
+// ãƒ•ã‚¡ã‚¤ãƒ«exist
 NSFileManager* manager = [NSFileManager defaultManager];
 NSString* path = [NSHomeDirectory() stringByAppendingPathComponent: @"Desktop\\data.txt"];
 BOOL isdir;
@@ -131,7 +137,7 @@ NSLog(@"canDele:%@",[manager isDeletableFileAtPath: path] ? @"YES" : @"NO");
 */
 
 /*
-// ƒtƒ@ƒCƒ‹ƒRƒs[
+// ãƒ•ã‚¡ã‚¤ãƒ«ã‚³ãƒ”ãƒ¼
 NSFileManager* manager = [NSFileManager defaultManager];
 NSError* err = nil;
 NSString* path = [NSHomeDirectory() 
@@ -152,7 +158,7 @@ if (err == nil) {
 
 
 /*
-// ƒpƒX‚Ì\¬—v‘f‚ğ‘€ì
+// ãƒ‘ã‚¹ã®æ§‹æˆè¦ç´ ã‚’æ“ä½œ
 NSString* path = NSHomeDirectory();
 path = [path stringByAppendingPathComponent: @"Desktop"];
 NSString* fullpath = [path stringByExpandingTildeInPath];
@@ -167,7 +173,7 @@ NSLog(@"%@",newpath);
 */
 
 /*
-// ƒpƒX‚Ì—v‘f‚ğ”z—ñ‚Åæ“¾‚·‚é
+// ãƒ‘ã‚¹ã®è¦ç´ ã‚’é…åˆ—ã§å–å¾—ã™ã‚‹
 NSString* path = NSHomeDirectory();
 NSArray* arr = [path pathComponents];
 NSLog(@"%@",arr);
@@ -175,7 +181,7 @@ NSLog(@"%@",arr);
 
 
 /*
-// ƒtƒ@ƒCƒ‹ƒpƒX‚ÆNSString
+// ãƒ•ã‚¡ã‚¤ãƒ«ãƒ‘ã‚¹ã¨NSString
 NSString* path = NSHomeDirectory();
 NSString* shortpath = [path stringByAbbreviatingWithTildeInPath];
 NSLog(@"%@",path);
@@ -183,7 +189,7 @@ NSLog(@"%@",shortpath);
 */
 
 /*
-// W‡‚Ìˆ—
+// é›†åˆã®å‡¦ç†
 NSMutableSet* set = [NSMutableSet setWithObjects: @"tuyano",@"taro",@"hanako",@"buhi",nil];
 NSEnumerator* enm = [set objectEnumerator];
 id obj;
@@ -194,7 +200,7 @@ while (obj = [enm nextObject]) {
 
 
 /*
-// W‡‰‰Z
+// é›†åˆæ¼”ç®—
 NSMutableSet* set = [NSMutableSet setWithObjects: @"tuyano",@"taro",@"hanako",@"buhi",nil];
 NSMutableSet* set2 = [NSMutableSet setWithObjects: @"tuyano",@"ihiro",@"hanako",@"hoge",nil];
 
@@ -205,7 +211,7 @@ NSLog(@"%@",set);
 
 
 /*
-// W‡‚Ì‘€ì
+// é›†åˆã®æ“ä½œ
 NSMutableSet* set = [NSMutableSet setWithCapacity:1];
 [set addObject:@"tuyano"];
 [set addObject:@"taro"];
@@ -217,7 +223,7 @@ NSLog(@"%@",set);
 
 
 /*
-// W‡ ƒ†ƒj[ƒN‚È’l‚ğ•Û
+// é›†åˆ ãƒ¦ãƒ‹ãƒ¼ã‚¯ãªå€¤ã‚’ä¿æŒ
 NSSet* set = [NSSet setWithObjects: @"tuyano",@"taro",nil];
 set = [set setByAddingObject : @"hanako"];
 set = [set setByAddingObject : @"taro"];
@@ -238,7 +244,7 @@ NSLog(@"%@",dict);
 
 
 /*
-// ƒL[‚Ìæ“¾
+// ã‚­ãƒ¼ã®å–å¾—
 NSDictionary* dic = [NSDictionary dictionaryWithObjectsAndKeys:
   @"090-9999-9999",@"tuyano",
   @"03-555-5555",@"taro",
@@ -253,7 +259,7 @@ for (obj in keys){
 
 
 /*
-// ˜A‘z”z—ñ
+// é€£æƒ³é…åˆ—
 NSArray* keys = [NSArray arrayWithObjects : @"tuyano",@"taro",@"hanako",nil];
 NSArray* vals = [NSArray arrayWithObjects : @"090-9999-9999",@"03-555-5555", @"080-765-4321",nil];
 NSDictionary* dic = [NSDictionary dictionaryWithObjects : vals forKeys : keys];
@@ -262,13 +268,13 @@ NSLog(@"%@",dic);
 
 
 /*
-// ƒCƒeƒŒ[ƒ^
+// ã‚¤ãƒ†ãƒ¬ãƒ¼ã‚¿
 NSMutableArray* arr = [NSMutableArray arrayWithObjects:@"Hello",@"Welcome",@"Bye",nil];
 for(id obj in arr){
     NSLog(@"%@",obj);
 }
 
-// ‹t‡‚Åæ‚èo‚µ
+// é€†é †ã§å–ã‚Šå‡ºã—
 NSEnumerator* enm = [arr reverseObjectEnumerator];
 id obj;
 while (obj = [enm nextObject]) {
@@ -278,7 +284,7 @@ while (obj = [enm nextObject]) {
 
 
 /*
-// ƒIƒuƒWƒFƒNƒg‚Ì‘}“ü‚Æíœ
+// ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æŒ¿å…¥ã¨å‰Šé™¤
 NSMutableArray* arr = [NSMutableArray arrayWithObjects:@"Hello",@"Welcome",@"Bye",nil];
 [arr insertObject:@"Hi" atIndex:1];
 [arr removeObject:@"Welcome"];
@@ -287,7 +293,7 @@ NSLog(@"%@",arr);
 */
 
 /*
-// NSMutableArray‚ÆƒIƒuƒWƒFƒNƒg‚Ì’Ç‰ÁE•ÏX
+// NSMutableArrayã¨ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®è¿½åŠ ãƒ»å¤‰æ›´
 NSMutableArray* arr = [NSMutableArray arrayWithCapacity:1];
 [arr addObject:@"Helo"];
 [arr addObject:@"Hi"];
@@ -297,7 +303,7 @@ NSLog(@"%@",arr);
 
 
 /*
-// 2‚Â‚ÌNSArray‚ğ1‚Â‚É‚µ‚Äo—Í‚·‚é
+// 2ã¤ã®NSArrayã‚’1ã¤ã«ã—ã¦å‡ºåŠ›ã™ã‚‹
 NSArray* arr = [NSArray arrayWithObjects : @"one", @"two", nil];
 NSArray* arr2 = [NSArray arrayWithObjects : @"three", @"four", nil];
 NSArray* newarr = [arr arrayByAddingObjectsFromArray : arr2];
@@ -310,7 +316,7 @@ for(i = 0;i < n;i++){
 
 
 /*
-// NSArray‚Ì‘S—v‘f‚ğo—Í‚·‚é
+// NSArrayã®å…¨è¦ç´ ã‚’å‡ºåŠ›ã™ã‚‹
 NSArray* arr = [NSArray arrayWithObjects:@"Hello", @"Welcome",@"Bye",nil];
 NSUInteger n = [arr count];
 int i;
@@ -320,13 +326,13 @@ for(i = 0;i < n;i++){
 */
 
 /*
-// NSArray‚ğì¬‚µo—Í‚·‚é
+// NSArrayã‚’ä½œæˆã—å‡ºåŠ›ã™ã‚‹
 NSArray* arr = [NSArray arrayWithObjects:@"Hello",@"Welcome",@"Bye",nil];
 NSLog(@"%@",arr);
 */
 
 /*
-// NSMutableString‚Ì‘€ì
+// NSMutableStringã®æ“ä½œ
 NSMutableString* str = [NSMutableString stringWithString:@"Welcome"];
 [str appendString:@"Objective-C."];
 [str insertString:@"=to=" atIndex:7];
@@ -336,31 +342,31 @@ NSLog(@"%@",str);
 
 /*
 NSString* str = @"Welcome to Objective-C.";
-// ƒƒ‚ƒŠ(ƒoƒCƒg”)Šm•Û
+// ãƒ¡ãƒ¢ãƒª(ãƒã‚¤ãƒˆæ•°)ç¢ºä¿
 NSMutableString* mu = [NSMutableString stringWithCapacity:1];
 [mu setString:str];
 NSLog(@"%@",mu);
 
-// ˆø”‚Å‰Šú‰»
+// å¼•æ•°ã§åˆæœŸåŒ–
 NSMutableString* mb = [NSMutableString stringWithString:str];
 NSLog(@"%@",mb);
 */
 
 /*
-// •¶š•ªŠ„
+// æ–‡å­—åˆ†å‰²
 NSString* str = @"Welcome to Objective-C.";
 NSArray* re = [str componentsSeparatedByString:@"Object"];
 NSLog(@"%@",re);
 
-// •¶šŒŸõ
+// æ–‡å­—æ¤œç´¢
 NSRange ra = [str rangeOfString:@"Object"];
 NSLog(@"%i - %i.",ra.location,ra.length);
 
-// •¶š’uŠ·
+// æ–‡å­—ç½®æ›
 NSString* rep = [str stringByReplacingOccurrencesOfString: @"Objective-C" withString:@"AppleScript"];
 NSLog(@"%@",rep);
 
-// •¶š“ü‘Ö
+// æ–‡å­—å…¥æ›¿
 NSRange r = NSMakeRange(5, 7);
 NSString* res = [str stringByReplacingCharactersInRange:r withString:@"*******"];
 NSLog(@"%@",res);
@@ -377,7 +383,7 @@ NSLog(@"%@",str2);
 
 
 /*
-// ƒtƒH[ƒ}ƒbƒgƒeƒLƒXƒg
+// ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆãƒ†ã‚­ã‚¹ãƒˆ
 NSString* str = @"Hello";
 NSString* format = @",Miss %@. How are you?";
 str = [str stringByAppendingFormat:format,@"Hanako"];
@@ -385,15 +391,15 @@ NSLog(@"%@",str);
 */
 
 /*
-// •¶š—ñ”äŠr
+// æ–‡å­—åˆ—æ¯”è¼ƒ
 NSString* str1 = @"Hello";
 NSString* str2 = [@"Hell" stringByAppendingString:@"o"];
 BOOL res = [str1 isEqualToString:str2];
 NSLog(res ? @"YES!" : @"No..");
-// •¶šƒIƒuƒWƒFƒNƒg”äŠr
+// æ–‡å­—ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆæ¯”è¼ƒ
 BOOL resu = [str1 isEqual:str2];
 NSLog(resu ? @"YES!" : @"No..");
-// “¯‚¶ƒIƒuƒWƒFƒNƒg‚ç‚µ‚¢EEE
+// åŒã˜ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚‰ã—ã„ãƒ»ãƒ»ãƒ»
 */
 
 
@@ -404,27 +410,27 @@ NSLog(@"count: %i",n);
 */
 
 /*
-// •¶š—ñŒ‹‡•—–¡
+// æ–‡å­—åˆ—çµåˆé¢¨å‘³
 NSString* str = @"Hello,";
 str = [str stringByAppendingString:@"Hanako"];
 NSLog(@"%@",str);
 */
 
 /*
-// DateŒ^
+// Dateå‹
 NSDate* dt = [NSDate date];
 NSLog(@"%@",dt);
 */
 
 
 /*
-// NSLog‚ÆNSStringƒCƒ“ƒXƒ^ƒ“ƒX
+// NSLogã¨NSStringã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
 NSString* str = @"Hello";
 NSLog(@"%@",str);
 */
 
 /*
-// ƒZƒŒƒNƒ^
+// ã‚»ãƒ¬ã‚¯ã‚¿
   id obj;
   SEL method;
 
@@ -435,7 +441,7 @@ NSLog(@"%@",str);
 
 
 /*
-// Œ^w’è
+// å‹æŒ‡å®š
   //id obj1 = [A new];
   //id obj2 = [Object new];
 
@@ -450,7 +456,7 @@ NSLog(@"%@",str);
 
 
 /*
-// ƒNƒ‰ƒX
+// ã‚¯ãƒ©ã‚¹
   id point1 , point2;
   point1 = [Pointe alloc];
   point2 = [Pointe alloc];
@@ -464,7 +470,7 @@ NSLog(@"%@",str);
 
 
 /*
-// “Ç‚İ‚İ‚à“®‚¢‚½
+// èª­ã¿è¾¼ã¿ã‚‚å‹•ã„ãŸ
 //#import <objc/Object.h>
 //#import "Test.h"
 #import "Test.m"
@@ -479,9 +485,9 @@ printf("main: name -> %s \n", [obj getName]);
 
 
 /*
-// ƒGƒ‰[‚ª‚Å‚ÄƒNƒ‰ƒX’è‹`‚Å‚«‚È‚¢¨GNUstep“±“ü‚Å‚Å‚«‚½
+// ã‚¨ãƒ©ãƒ¼ãŒã§ã¦ã‚¯ãƒ©ã‚¹å®šç¾©ã§ããªã„â†’GNUstepå°å…¥ã§ã§ããŸ
 #include <Foundation/NSObject.h>
-// import‚Í‘½dƒCƒ“ƒNƒ‹[ƒhƒK[ƒh‚Â‚«
+// importã¯å¤šé‡ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ã‚¬ãƒ¼ãƒ‰ã¤ã
 
 id obj = [Kurasu alloc];
 [obj method];
@@ -489,7 +495,7 @@ id obj = [Kurasu alloc];
 
 
 /*
-// ¬Œ÷—á
+// æˆåŠŸä¾‹
 id obj = [HelloWorld alloc];
 [obj hello];
 return 0;

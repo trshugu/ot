@@ -1,4 +1,5 @@
 #import <stdio.h>
+#import <Foundation/Foundation.h>
 #import <Foundation/NSObject.h>
 #import <Foundation/NSString.h>
 #import <Foundation/NSAutoreleasePool.h>
@@ -107,14 +108,14 @@
 
 
 /*
-// ”ñ“¯Šú’ÊM‚ÆƒfƒŠƒQ[ƒg
-// ƒfƒŠƒQ[ƒgƒNƒ‰ƒX‚ÌéŒ¾
+// éåŒæœŸé€šä¿¡ã¨ãƒ‡ãƒªã‚²ãƒ¼ãƒˆ
+// ãƒ‡ãƒªã‚²ãƒ¼ãƒˆã‚¯ãƒ©ã‚¹ã®å®£è¨€
 @interface SampleConnectDelegate : NSObject {
   NSMutableData* result;
 }
 @end
 
-// ƒfƒŠƒQ[ƒgƒNƒ‰ƒX‚ÌÀ‘•
+// ãƒ‡ãƒªã‚²ãƒ¼ãƒˆã‚¯ãƒ©ã‚¹ã®å®Ÿè£…
 @implementation SampleConnectDelegate
   - (void)connection:(NSURLConnection *)connection
   didReceiveResponse:(NSURLResponse *)response {
@@ -134,7 +135,7 @@
 
 
 /*
-// ƒZƒŒƒNƒ^
+// ã‚»ãƒ¬ã‚¯ã‚¿
 @interface Aaa : NSObject
 - (void) Writen;
 @end
@@ -148,7 +149,7 @@
 
 
 /*
-// ƒNƒ‰ƒX
+// ã‚¯ãƒ©ã‚¹
 @interface Pointe : NSObject
 {
   int xx, yy;
@@ -178,7 +179,7 @@
 
 
 /*
-// ƒGƒ‰[‚ª‚Å‚ÄƒNƒ‰ƒX’è‹`‚Å‚«‚È‚¢¨GNUstep“±“ü‚Å‚Å‚«‚½
+// ã‚¨ãƒ©ãƒ¼ãŒã§ã¦ã‚¯ãƒ©ã‚¹å®šç¾©ã§ããªã„â†’GNUstepå°å…¥ã§ã§ããŸ
 @interface Kurasu :NSObject
 {
    int x;
@@ -201,7 +202,7 @@
 
 
 /*
-// ¬Œ÷—á
+// æˆåŠŸä¾‹
 @interface HelloWorld : NSObject
 - (void) hello;
 @end
