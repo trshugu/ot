@@ -2,6 +2,7 @@
 
 int main(void)
 {
+@autoreleasepool{
 /*
 */
 
@@ -12,15 +13,12 @@ int main(void)
 
 
 /*
+*/
 // defaultManageを複数回呼び出す
-@autoreleasepool
-{
-  NSFileManager* manager1 = [NSFileManager defaultManager];
-  NSFileManager* manager2 = [NSFileManager defaultManager];
-  NSLog(@"%@", manager1);
-  NSLog(@"%@", manager2);
-}
-*/
+NSFileManager* manager1 = [NSFileManager defaultManager];
+NSFileManager* manager2 = [NSFileManager defaultManager];
+NSLog(@"%@", manager1);
+NSLog(@"%@", manager2);
 
 
 /*
@@ -31,7 +29,7 @@ MyTestClass* obj2 = [MyTestClass myTestClassToEndCount:3];
 [NSThread detachNewThreadSelector: @selector(printMessage:) toTarget:obj1 withObject:@"first"];
 [NSThread detachNewThreadSelector: @selector(printMessage:) toTarget:obj2 withObject:@"second"];
 NSLog(@"start!!");
- 
+
 // 終了しないようにしておく
 [[NSRunLoop currentRunLoop] run];
 */
@@ -77,7 +75,7 @@ NSError* error = nil;
 
 NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 NSString* result = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-NSLog(@"%@",result);
+NSLog(@"%@", result);
 */
 
 
@@ -348,88 +346,102 @@ NSMutableString* str = [NSMutableString stringWithString:@"Welcome"];
 NSLog(@"%@",str);
 */
 
-/*
-NSString* str = @"Welcome to Objective-C.";
-// メモリ(バイト数)確保
-NSMutableString* mu = [NSMutableString stringWithCapacity:1];
-[mu setString:str];
-NSLog(@"%@",mu);
 
-// 引数で初期化
-NSMutableString* mb = [NSMutableString stringWithString:str];
-NSLog(@"%@",mb);
+/*
+@autoreleasepool{
+  NSString* str = @"Welcome to Objective-C.";
+  // メモリ(バイト数)確保
+  NSMutableString* mu = [NSMutableString stringWithCapacity:1];
+  [mu setString:str];
+  NSLog(@"%@",mu);
+
+  // 引数で初期化
+  NSMutableString* mb = [NSMutableString stringWithString:str];
+  NSLog(@"%@",mb);
+}
 */
 
 /*
-// 文字分割
-NSString* str = @"Welcome to Objective-C.";
-NSArray* re = [str componentsSeparatedByString:@"Object"];
-NSLog(@"%@",re);
+@autoreleasepool{
+  // 文字分割
+  NSString* str = @"Welcome to Objective-C.";
+  NSArray* re = [str componentsSeparatedByString:@"Object"];
+  NSLog(@"%@",re);
 
-// 文字検索
-NSRange ra = [str rangeOfString:@"Object"];
-NSLog(@"%i - %i.",ra.location,ra.length);
+  // 文字検索
+  NSRange ra = [str rangeOfString:@"Object"];
+  NSLog(@"%i - %i.",ra.location,ra.length);
 
-// 文字置換
-NSString* rep = [str stringByReplacingOccurrencesOfString: @"Objective-C" withString:@"AppleScript"];
-NSLog(@"%@",rep);
+  // 文字置換
+  NSString* rep = [str stringByReplacingOccurrencesOfString: @"Objective-C" withString:@"AppleScript"];
+  NSLog(@"%@",rep);
 
-// 文字入替
-NSRange r = NSMakeRange(5, 7);
-NSString* res = [str stringByReplacingCharactersInRange:r withString:@"*******"];
-NSLog(@"%@",res);
+  // 文字入替
+  NSRange r = NSMakeRange(5, 7);
+  NSString* res = [str stringByReplacingCharactersInRange:r withString:@"*******"];
+  NSLog(@"%@",res);
+}
 */
-
 
 
 /*
 // substr
-NSString* str = @"Welcome to Objective-C.";
-NSString* str2 = [str substringWithRange:NSMakeRange(5, 7)];
-NSLog(@"%@",str2);
+@autoreleasepool{
+  NSString* str = @"Welcome to Objective-C.";
+  NSString* str2 = [str substringWithRange:NSMakeRange(5, 7)];
+  NSLog(@"%@",str2);
+}
 */
-
 
 /*
 // フォーマットテキスト
-NSString* str = @"Hello";
-NSString* format = @",Miss %@. How are you?";
-str = [str stringByAppendingFormat:format,@"Hanako"];
-NSLog(@"%@",str);
+@autoreleasepool{
+  NSString* str = @"Hello";
+  NSString* format = @",Miss %@. How are you?";
+  str = [str stringByAppendingFormat:format, @"Hanako"];
+  NSLog(@"%@",str);
+}
 */
+
 
 /*
 // 文字列比較
-NSString* str1 = @"Hello";
-NSString* str2 = [@"Hell" stringByAppendingString:@"o"];
-BOOL res = [str1 isEqualToString:str2];
-NSLog(res ? @"YES!" : @"No..");
-// 文字オブジェクト比較
-BOOL resu = [str1 isEqual:str2];
-NSLog(resu ? @"YES!" : @"No..");
-// 同じオブジェクトらしい・・・
+@autoreleasepool{
+  NSString* str1 = @"Hello";
+  NSString* str2 = [@"Hell" stringByAppendingString:@"o"];
+  
+  // 文字オブジェクト比較
+  BOOL res = [str1 isEqualToString:str2];
+  NSLog(res ? @"YES!" : @"No..");
+  // 同じオブジェクトらしい・・・
+  BOOL resu = [str1 isEqual:str2];
+  NSLog(resu ? @"YES!" : @"No..");
+}
 */
-
 
 /*
 // length
 int n = [@"Welcome to Objective-C." length];
-NSLog(@"count: %i",n);
+NSLog(@"count: %i", n);
 */
+
 
 /*
 // 文字列結合風味
-NSString* str = @"Hello,";
-str = [str stringByAppendingString:@"Hanako"];
-NSLog(@"%@",str);
+@autoreleasepool{
+  NSString* str = @"Hello,";
+  str = [str stringByAppendingString:@"Hanako"];
+  NSLog(@"%@",str);
+}
 */
 
 /*
 // Date型
-NSDate* dt = [NSDate date];
-NSLog(@"%@",dt);
+@autoreleasepool{
+  NSDate* dt = [NSDate date];
+  NSLog(@"%@",dt);
+}
 */
-
 
 /*
 // NSLogとNSStringインスタンス
@@ -438,29 +450,31 @@ NSLog(@"%@",str);
 */
 
 /*
-// セレクタ
+// セレクタ(NG)
+@autoreleasepool{
   id obj;
   SEL method;
 
-  obj = [Aaa new];
+  obj = [A new];
   method = @selector(Writen);
   [obj perform:method];
+}
 */
-
 
 /*
 // 型指定
-  //id obj1 = [A new];
-  //id obj2 = [Object new];
+@autoreleasepool{
+  id obj1 = [A new];
+  id obj2 = [NSObject new];
 
-  //[obj1 Write];
-  //[obj2 Write];
+  [obj1 Writen];
+  //[obj2 Writen];
 
   A * obja = [A new];
-  [obja Write];
+  [obja Writen];
   //[obja free];
+}
 */
-
 
 
 /*
@@ -514,6 +528,6 @@ return 0;
   printf("hell\n");
   printf("world\n");
 */
-  
+  }
   return 0;
 }

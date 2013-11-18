@@ -136,11 +136,11 @@
 
 /*
 // セレクタ
-@interface Aaa : NSObject
+@interface A : NSObject
 - (void) Writen;
 @end
 
-@implementation Aaa
+@implementation A
 - (void) Writen {
   printf("I am the born of my sword.\n");
 }
