@@ -7,6 +7,18 @@ int main(void)
 */
 
 
+/*
+*/
+// ブロック構文によりpower関数を作成
+int (^power)(int) = ^(int x) {
+    return x * x;
+};
+
+
+// 結果をログに表示
+NSLog(@"%d", power(10));
+
+/*
 // ブロック構文によりpower関数を作成
 void (^fnc)() = ^() {
   NSLog(@"sadf");
@@ -15,6 +27,7 @@ void (^fnc)() = ^() {
  
 // 結果をログに表示
 fnc();
+*/
 
 /*
 // 設定ファイルの保存(~\GNUstep\Defaultsにでた)
