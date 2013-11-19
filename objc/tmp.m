@@ -7,18 +7,37 @@ int main(void)
 */
 
 
+// ブロック構文によりpower関数を作成
+void (^fnc)() = ^() {
+  NSLog(@"sadf");
+  //return x * x;
+};
+ 
+// 結果をログに表示
+fnc();
 
+/*
+// 設定ファイルの保存(~\GNUstep\Defaultsにでた)
+NSUserDefaults* ns = [NSUserDefaults standardUserDefaults];
+NSDictionary* memodata = [ns dictionaryForKey:@"memo"];
+NSMutableDictionary* memo = [NSMutableDictionary dictionaryWithDictionary:memodata];
 
+NSString* key = @"mememem";
+NSString* memostr = @"strstrtsr";
+[memo setValue:memostr forKey:key];
 
+[ns setObject:memo forKey:@"memo"];
+[ns synchronize];
+*/
 
 
 /*
-*/
 // defaultManageを複数回呼び出す
 NSFileManager* manager1 = [NSFileManager defaultManager];
 NSFileManager* manager2 = [NSFileManager defaultManager];
 NSLog(@"%@", manager1);
 NSLog(@"%@", manager2);
+*/
 
 
 /*
