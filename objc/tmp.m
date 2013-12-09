@@ -6,9 +6,10 @@ int main(void)
 /*
 */
 
+NSLog(@"sadf");
+
 
 /*
-*/
 // ブロック構文によりpower関数を作成
 int (^power)(int) = ^(int x) {
     return x * x;
@@ -17,6 +18,7 @@ int (^power)(int) = ^(int x) {
 
 // 結果をログに表示
 NSLog(@"%d", power(10));
+*/
 
 /*
 // ブロック構文によりpower関数を作成
