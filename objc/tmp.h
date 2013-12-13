@@ -21,7 +21,26 @@
 
 
 
+/*
+// atomicでもスレッドセーフでない
+@interface AtomicTest : NSObject {
+    int count;
+}
+@property(assign) int count;
+- (void)increment;
+@end
 
+
+@implementation AtomicTest
+@synthesize count;
+- (void)increment {
+    //こうすればよい
+    @synchronized(self) {
+      self.count++;
+    }
+}
+@end
+*/
 
 
 /*

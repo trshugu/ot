@@ -3,10 +3,37 @@
 int main(void)
 {
 @autoreleasepool{
+NSLog(@"tmp");
 /*
 */
 
-NSLog(@"sadf");
+
+
+
+/*
+// atomicでもスレッドセーフでない
+NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+AtomicTest *test = [[AtomicTest alloc] init];
+
+// スレッド呼び出しで10万回インクリメント
+for(int i=0; i<40000; i++) {
+  [NSThread detachNewThreadSelector:@selector(increment) toTarget:test withObject:nil];
+}
+
+[NSThread sleepForTimeInterval:5.0];
+NSLog(@"count:%d", test.count);
+[NSThread sleepForTimeInterval:5.0];
+NSLog(@"count:%d", test.count);
+[NSThread sleepForTimeInterval:5.0];
+NSLog(@"count:%d", test.count);
+[NSThread sleepForTimeInterval:5.0];
+NSLog(@"count:%d", test.count);
+[NSThread sleepForTimeInterval:5.0];
+NSLog(@"count:%d", test.count);
+
+[test release];
+[pool drain];
+*/
 
 
 /*
@@ -513,15 +540,15 @@ NSLog(@"%@",str);
 
 /*
 // クラス
-  id point1 , point2;
-  point1 = [Pointe alloc];
-  point2 = [Pointe alloc];
+id point1 , point2;
+point1 = [Pointe alloc];
+point2 = [Pointe alloc];
 
-  [point1 setPoint:32 int:64];
-  [point2 setPoint:256 int:128];
+[point1 setPoint:32 int:64];
+[point2 setPoint:256 int:128];
 
-  printf("point1:X=%d, Y=%d\n", [point1 getX] , [point1 getY]);
-  printf("point2:X=%d, Y=%d\n", [point2 getX] , [point2 getY]);
+printf("point1:X=%d, Y=%d\n", [point1 getX] , [point1 getY]);
+printf("point2:X=%d, Y=%d\n", [point2 getX] , [point2 getY]);
 */
 
 
