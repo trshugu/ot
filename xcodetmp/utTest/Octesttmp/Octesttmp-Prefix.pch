@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'Octesttmp' target in the 'Octesttmp' project
+//
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+#endif

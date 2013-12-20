@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E95DD5A1864232F009309A7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF63B4C186419A10008F991 /* SenTestingKit.framework */; };
+		4E95DD5B1864232F009309A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF63B4E186419A10008F991 /* UIKit.framework */; };
+		4E95DD5C1864232F009309A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF63B3E1864199F0008F991 /* Foundation.framework */; };
+		4E95DD621864232F009309A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E95DD601864232F009309A7 /* InfoPlist.strings */; };
+		4E95DD651864232F009309A7 /* Octesttmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E95DD641864232F009309A7 /* Octesttmp.m */; };
+		4E95DD6D18642534009309A7 /* testset.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E95DD6B18642534009309A7 /* testset.h */; };
+		4E95DD6E18642534009309A7 /* testset.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E95DD6C18642534009309A7 /* testset.m */; };
 		4EF63B3F1864199F0008F991 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF63B3E1864199F0008F991 /* Foundation.framework */; };
 		4EF63B451864199F0008F991 /* utTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF63B441864199F0008F991 /* utTest.m */; };
 		4EF63B4D186419A10008F991 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF63B4C186419A10008F991 /* SenTestingKit.framework */; };
 		4EF63B4F186419A10008F991 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF63B4E186419A10008F991 /* UIKit.framework */; };
 		4EF63B50186419A10008F991 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF63B3E1864199F0008F991 /* Foundation.framework */; };
 		4EF63B53186419A10008F991 /* libutTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF63B3B1864199E0008F991 /* libutTest.a */; };
-		4EF63B59186419A10008F991 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EF63B57186419A10008F991 /* InfoPlist.strings */; };
-		4EF63B5C186419A10008F991 /* utTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF63B5B186419A10008F991 /* utTestTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +33,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E95DD591864232F009309A7 /* Octesttmp.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Octesttmp.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E95DD5F1864232F009309A7 /* Octesttmp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Octesttmp-Info.plist"; sourceTree = "<group>"; };
+		4E95DD611864232F009309A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4E95DD631864232F009309A7 /* Octesttmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Octesttmp.h; sourceTree = "<group>"; };
+		4E95DD641864232F009309A7 /* Octesttmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Octesttmp.m; sourceTree = "<group>"; };
+		4E95DD661864232F009309A7 /* Octesttmp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Octesttmp-Prefix.pch"; sourceTree = "<group>"; };
+		4E95DD6B18642534009309A7 /* testset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testset.h; sourceTree = "<group>"; };
+		4E95DD6C18642534009309A7 /* testset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testset.m; sourceTree = "<group>"; };
 		4EF63B3B1864199E0008F991 /* libutTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libutTest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF63B3E1864199F0008F991 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EF63B421864199F0008F991 /* utTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "utTest-Prefix.pch"; sourceTree = "<group>"; };
@@ -36,13 +49,19 @@
 		4EF63B4B186419A00008F991 /* utTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = utTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF63B4C186419A10008F991 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4EF63B4E186419A10008F991 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		4EF63B56186419A10008F991 /* utTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "utTestTests-Info.plist"; sourceTree = "<group>"; };
-		4EF63B58186419A10008F991 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4EF63B5A186419A10008F991 /* utTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utTestTests.h; sourceTree = "<group>"; };
-		4EF63B5B186419A10008F991 /* utTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = utTestTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4E95DD551864232F009309A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E95DD5A1864232F009309A7 /* SenTestingKit.framework in Frameworks */,
+				4E95DD5B1864232F009309A7 /* UIKit.framework in Frameworks */,
+				4E95DD5C1864232F009309A7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EF63B381864199E0008F991 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,11 +84,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E95DD5D1864232F009309A7 /* Octesttmp */ = {
+			isa = PBXGroup;
+			children = (
+				4E95DD6B18642534009309A7 /* testset.h */,
+				4E95DD6C18642534009309A7 /* testset.m */,
+				4E95DD631864232F009309A7 /* Octesttmp.h */,
+				4E95DD641864232F009309A7 /* Octesttmp.m */,
+				4E95DD5E1864232F009309A7 /* Supporting Files */,
+			);
+			path = Octesttmp;
+			sourceTree = "<group>";
+		};
+		4E95DD5E1864232F009309A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E95DD5F1864232F009309A7 /* Octesttmp-Info.plist */,
+				4E95DD601864232F009309A7 /* InfoPlist.strings */,
+				4E95DD661864232F009309A7 /* Octesttmp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4EF63B301864199D0008F991 = {
 			isa = PBXGroup;
 			children = (
 				4EF63B401864199F0008F991 /* utTest */,
-				4EF63B54186419A10008F991 /* utTestTests */,
+				4E95DD5D1864232F009309A7 /* Octesttmp */,
 				4EF63B3D1864199E0008F991 /* Frameworks */,
 				4EF63B3C1864199E0008F991 /* Products */,
 			);
@@ -80,6 +121,7 @@
 			children = (
 				4EF63B3B1864199E0008F991 /* libutTest.a */,
 				4EF63B4B186419A00008F991 /* utTestTests.octest */,
+				4E95DD591864232F009309A7 /* Octesttmp.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,25 +154,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4EF63B54186419A10008F991 /* utTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				4EF63B5A186419A10008F991 /* utTestTests.h */,
-				4EF63B5B186419A10008F991 /* utTestTests.m */,
-				4EF63B55186419A10008F991 /* Supporting Files */,
-			);
-			path = utTestTests;
-			sourceTree = "<group>";
-		};
-		4EF63B55186419A10008F991 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4EF63B56186419A10008F991 /* utTestTests-Info.plist */,
-				4EF63B57186419A10008F991 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -138,12 +161,31 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E95DD6D18642534009309A7 /* testset.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4E95DD581864232F009309A7 /* Octesttmp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E95DD691864232F009309A7 /* Build configuration list for PBXNativeTarget "Octesttmp" */;
+			buildPhases = (
+				4E95DD541864232F009309A7 /* Sources */,
+				4E95DD551864232F009309A7 /* Frameworks */,
+				4E95DD561864232F009309A7 /* Resources */,
+				4E95DD571864232F009309A7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Octesttmp;
+			productName = Octesttmp;
+			productReference = 4E95DD591864232F009309A7 /* Octesttmp.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		4EF63B3A1864199E0008F991 /* utTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EF63B5F186419A10008F991 /* Build configuration list for PBXNativeTarget "utTest" */;
@@ -202,22 +244,43 @@
 			targets = (
 				4EF63B3A1864199E0008F991 /* utTest */,
 				4EF63B4A186419A00008F991 /* utTestTests */,
+				4E95DD581864232F009309A7 /* Octesttmp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4E95DD561864232F009309A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E95DD621864232F009309A7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EF63B48186419A00008F991 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF63B59186419A10008F991 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4E95DD571864232F009309A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		4EF63B49186419A00008F991 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,11 +297,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4E95DD541864232F009309A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E95DD651864232F009309A7 /* Octesttmp.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EF63B371864199E0008F991 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4EF63B451864199F0008F991 /* utTest.m in Sources */,
+				4E95DD6E18642534009309A7 /* testset.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF63B5C186419A10008F991 /* utTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +332,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4EF63B57186419A10008F991 /* InfoPlist.strings */ = {
+		4E95DD601864232F009309A7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4EF63B58186419A10008F991 /* en */,
+				4E95DD611864232F009309A7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -272,6 +343,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4E95DD671864232F009309A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Octesttmp/Octesttmp-Prefix.pch";
+				INFOPLIST_FILE = "Octesttmp/Octesttmp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4E95DD681864232F009309A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Octesttmp/Octesttmp-Prefix.pch";
+				INFOPLIST_FILE = "Octesttmp/Octesttmp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		4EF63B5D186419A10008F991 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -371,6 +472,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4E95DD691864232F009309A7 /* Build configuration list for PBXNativeTarget "Octesttmp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E95DD671864232F009309A7 /* Debug */,
+				4E95DD681864232F009309A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4EF63B351864199D0008F991 /* Build configuration list for PBXProject "utTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -387,6 +496,7 @@
 				4EF63B61186419A10008F991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EF63B62186419A10008F991 /* Build configuration list for PBXNativeTarget "utTestTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +505,7 @@
 				4EF63B64186419A10008F991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
