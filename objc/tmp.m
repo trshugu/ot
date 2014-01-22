@@ -9,6 +9,50 @@ NSLog(@"tmp");
 
 
 
+/*
+// json確認
+id dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"hoge",@"2",@"fuga", nil];
+
+NSError *error = nil;
+NSData *data = nil;
+
+//NSLog(@"%c", [NSJSONSerialization isValidJSONObject:dict]);
+if([NSJSONSerialization isValidJSONObject:dict]){
+    data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    NSLog(@"%@",data); 
+    NSLog(@"%@",[[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]autorelease]);
+}
+*/
+
+/*
+// JSON 文字列
+//NSString *jsonString = @"[{\"title\":\"RDocwrite\", \"content\":\"RDonaniga\"}, {\"title\":\"kumikomi\", \"content\":\"kumikome\"}]";
+//NSString *jsonString = @"[]";
+id dict = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"hoge",@"2",@"fuga", nil];
+
+// JSON 文字列をそのまま NSJSONSerialization に渡せないので、NSData に変換する
+//NSData *jsonData = [jsonString dataUsingEncoding:NSUnicodeStringEncoding];
+
+// JSON を NSArray に変換する
+NSError *error;
+//NSArray *array = [NSJSONSerialization JSONObjectWithData:jsonData
+//                                                 options:NSJSONReadingAllowFragments
+//                                                  error:&error];
+
+NSLog(@"%c", [NSJSONSerialization isValidJSONObject:dict]);
+
+
+
+// JSON のオブジェクトは NSDictionary に変換されている
+NSMutableArray *results = [[NSMutableArray alloc] init];
+for (NSDictionary *obj in dict)
+{
+  NSLog(@"%@", obj);
+}
+*/
+
+
+
 
 /*
 // atomicでもスレッドセーフでない
