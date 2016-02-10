@@ -2,8 +2,15 @@
 
 int main(void)
 {
-@autoreleasepool{
-NSLog(@"tmp");
+
+/*
+*/
+  printf("hell\n");
+  printf("world\n");
+
+
+//@autoreleasepool{
+//NSLog(@"tmp");
 /*
 */
 
@@ -633,6 +640,6 @@ return 0;
   printf("hell\n");
   printf("world\n");
 */
-  }
+//  }
   return 0;
 }

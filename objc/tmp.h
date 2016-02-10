@@ -1,4 +1,5 @@
 #import <stdio.h>
+/*
 #import <Foundation/Foundation.h>
 #import <Foundation/NSObject.h>
 #import <Foundation/NSString.h>
@@ -13,6 +14,7 @@
 #import <Foundation/NSRunLoop.h>
 #import <Foundation/NSData.h>
 #import <Cocoa/Cocoa.h>
+*/
 #import <time.h>
 
 /*
